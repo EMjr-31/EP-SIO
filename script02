@@ -1,0 +1,68 @@
+echo "Comprimir Archivos 5,15 y 30"
+cd examen 
+for FILE in *Archivo5*; do
+	ext="${FILE##*.}"
+	echo $FILE
+	if [ $ext == "dat" ]
+	then
+		echo "Extencion valida"
+		gzip $FILE
+		echo "Archivo compreso"
+		echo "" 
+	else
+		echo "Extencion no valida"
+	fi
+done
+
+for FILE in *Archivo15*; do
+	ext="${FILE##*.}"
+	echo $FILE
+	if [ $ext == "dat" ]
+	then
+		echo "Extencion valida"
+		gzip $FILE
+		echo "Archivo compreso"
+		echo "" 
+	else
+		echo "Extencion no valida"
+	fi
+done
+
+for FILE in *Archivo30*; do
+	ext="${FILE##*.}"
+	echo $FILE
+	if [ $ext == "dat" ]
+	then
+		echo "Extencion valida"
+		gzip $FILE
+		echo "Archivo compreso"
+		echo "" 
+	else
+		echo "Extencion no valida"
+	fi
+done
+echo "Fin de proceso"
+echo "-------------------------------------------------"
+echo " " 
+
+echo "Cambiar el nombre de archivos que contengan 3"
+for FILE in *3*; do
+	ext="${FILE##*.}"
+	echo $FILE
+	if [ $ext == "dat" ];
+	then
+		echo "Extencion valida"
+		nombre="${FILE%.*}"
+		mv $FILE $nombre.txt
+		echo "Arhivo renombrado"
+		echo " "
+	else
+		echo "Extencion no valida"
+	fi 
+done
+echo "Fin de proceso"
+echo "Autor:MC190242"
+
+
+
+

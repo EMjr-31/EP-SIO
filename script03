@@ -1,0 +1,5 @@
+echo "Copia de archivos"
+mkdir copia
+cd examen 
+cp * ../copia
+echo "Autor:MC190242"

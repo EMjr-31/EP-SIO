@@ -1,0 +1,5 @@
+echo "Se crearon 40 archivos .bat en la carpeta examen"
+mkdir examen
+cd examen/ 
+touch Archivo{1..40}.dat
+echo "Autor:MC190242"
